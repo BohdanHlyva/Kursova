@@ -59,16 +59,7 @@ public interface IServer extends Remote {
         }
 
         private void Sort(int len) {
-          /* for(int i=1; i<end; ++i){
-               int j=i-1;
-               int temp=Mass_to_sort[i];
-               while(j>=0&& temp<Mass_to_sort[j])
-               {
-                   Mass_to_sort[j+1]=Mass_to_sort[j];
-                   Mass_to_sort[j]=temp;
-                   --j;
-               }
-           }*/
+
             // Для всіх елементів крім початкового
             for (int i = 1; i < len; i++)
             {
