@@ -49,23 +49,7 @@ public class RmiClient extends javax.swing.JFrame {
                 }
             }
         });
-        //disconnect button
-        jButton2.addActionListener(new ActionListener() {
-            @Override
-            //close
-            public void actionPerformed(ActionEvent e) {
-                if (ConnRMI.rregistry() != null && ConnRMI.ident() != null) {
 
-                    try {
-                        ConnRMI.close();
-                    } catch (IOException e1) {
-                        e1.printStackTrace();
-                    }
-
-                    jTextArea1.append(simpleDateFormat.format(new Date()) + "Disconnect!\n");
-                }
-            }
-        });
         //send button
         jButton3.addActionListener(new ActionListener() {
             @Override
@@ -128,7 +112,7 @@ public class RmiClient extends javax.swing.JFrame {
         jTextArea1.setColumns(10);
         jTextArea1.setRows(10);
         jScrollPane1.setViewportView(jTextArea1);
-        jTextField2.setText("%log:log-lllm pass-pppp;");
+        jTextField2.setText("%process: f-C:\\Users\\Admin\\Idea\\Idea.txt to-C:\\Users\\Admin\\Idea\\Idea.txt;");
         jButton3.setText("SEND");
         jTextField1.setText("localhost");
         jLabel1.setText("IP");
