@@ -49,7 +49,23 @@ public class RmiClient extends javax.swing.JFrame {
                 }
             }
         });
+        //disconnect button
+        jButton2.addActionListener(new ActionListener() {
+            @Override
+            //close
+            public void actionPerformed(ActionEvent e) {
+                if (ConnRMI.rregistry() != null && ConnRMI.ident() != null) {
 
+                    try {
+                        ConnRMI.close();
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
+
+                    jTextArea1.append(simpleDateFormat.format(new Date()) + "Disconnect!\n");
+                }
+            }
+        });
         //send button
         jButton3.addActionListener(new ActionListener() {
             @Override
@@ -116,7 +132,7 @@ public class RmiClient extends javax.swing.JFrame {
         jButton3.setText("SEND");
         jTextField1.setText("localhost");
         jLabel1.setText("IP");
-        jTextField3.setText("4321");
+        jTextField3.setText("3000");
         jLabel3.setText("PORT");
 ///////////////////
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -90,6 +90,7 @@ public class ConnectionHandlerRmi implements Closeable{
        end= currentTimeMillis();
        time=end-start;
        string = new String("Ok! File is sorted with time-"+time/1000+" sec");
+       System.out.println("Ok! File is sorted with time-"+time/1000+" sec");
     }
 
     private void stuff(String fromFile, String toFile) throws IOException {
@@ -110,6 +111,8 @@ public class ConnectionHandlerRmi implements Closeable{
         ////////////////////////////
         byte[] byte_array=st_2.toString().getBytes();
         Files.write(p_1, byte_array);
+        string = new String("Ok! File is generated! Please, wait for sorting ;)");
+        System.out.println("Ok! File is generated! Please, wait for sorting ;)");
         proc(from_path,to_path);
     }
     ////////////////////////////
